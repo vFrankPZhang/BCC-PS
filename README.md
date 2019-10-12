@@ -20,24 +20,38 @@ Blue Cloud Certified - PowerShell
 
 # 协作步骤
 
-以Readme分支为例：
+以Wind来完成readme内容的创作，其他人校对为例：
 
-  1、切换到Readme分支  
+  1、Wind在自己的本地，将Git分支切换到readme分支  
   ```powershell
-  git checkout readme
+  PS >git checkout readme
   ```  
-  2、基于Readme分支创建自己的分支
+  2、基于readme分支创建自己的分支
   ```powershell
-
+  PS >git checkout -b 'wind/readme'
   ```
-  创建具体内容的新分支；如：branch：outline  
-  3、创建具体内容分支的工作分支完成工作；如：frank/outline  
-  4、在工作分支中完成工作  
-  5、合并到具体内容分支；将frank/outline 合并到 outline  
-  6、邮件中更新进度为完成  
-  7、其他人clone具体内容分支；讲outline clone到自己的本地，进行编辑  
-  8、pull request回具体内容分支；将outline pull request回Frank的outline分支  
-  9、Frank确认后进行merge
+  3、完成文档的创作
+  4、将自己的分支push回Frank的Github
+  ```powershell
+  PS >git push origin wind/readme
+  ```
+  5、提交Pull Request到readme分支
+  1）登录自己的Github帐号  
+  2）用浏览器进入：https://github.com/vFrankPZhang/BCC-PS  
+  3）点击“Pull requests”标签  
+  ![](images/readme.pullrequest.1.png)
+  4）点击“New pull request”按钮  
+  ![](images/readme.pullrequest.2.png)
+  5）选择清楚，pull request的方向，点击“Create new pull request”按钮，完成Pull request  
+  ![](images/readme.pullrequest.3.png)
+  6）填写说明，选择，需要帮你Review的人，然后点击“Create pull request”  
+  ![](images/readme.pullrequest.4.png)
+  7）此时，建坤在Pull request中找到Wind/readme的Pull request点开  
+  ![](images/readme.pullrequest.5.png)
+  8）点击Files changed，对内容进行校对  
+  ![](images/readme.pullrequest.6.png)
+
+直到最后讨论完成，由Frank进行Merge操作。
 
 # 文字稿
 
