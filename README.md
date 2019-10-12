@@ -2,13 +2,13 @@
 
 Blue Cloud Certified - PowerShell
 
-# 学习材料
+# 学习材料包括
 
   文字稿  
   PPT  
   视频
 
-# 准备工作
+# 协作前的准备工作
   
   1、注册Github个人账号  
   2、在本地安装Git和VS Code  
@@ -55,7 +55,7 @@ Blue Cloud Certified - PowerShell
 
 # 文字稿
 
-## 文字稿的具体实施步骤
+## 完成文字稿的具体步骤
 
   1、章的划分、排序，每章目标的说明，及不同章的顺序的逻辑  
   2、根据确定的章，确定节的内容纲要  
