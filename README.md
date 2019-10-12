@@ -30,12 +30,12 @@ Blue Cloud Certified - PowerShell
   ```powershell
   PS >git checkout -b 'wind/readme'
   ```
-  3、完成文档的创作
+  3、完成文档的创作  
   4、将自己的分支push回Frank的Github
   ```powershell
   PS >git push origin wind/readme
   ```
-  5、提交Pull Request到readme分支
+  5、提交Pull Request到readme分支  
   1）登录自己的Github帐号  
   2）用浏览器进入：https://github.com/vFrankPZhang/BCC-PS  
   3）点击“Pull requests”标签  
