@@ -20,13 +20,22 @@ Blue Cloud Certified - PowerShell
 
 # 协作步骤
 
+  1、依据分工，建立具体内容的Branch
+  2、owner建立自己名字的具体内容的Branch
+  3、owner完成内容创建后merge到具体内容的Branch上
+  4、其他人修正具体内容的Branch，pull request回内容的Branch
+  5、owner根据pull request修改，完成最终完
+  6、最后由Project owner确认
+
+# 协作示例
+
 以Wind来完成readme内容的创作，其他人校对为例：
 
   1、Wind在自己的本地，将Git分支切换到readme分支  
   ```powershell
   PS >git checkout readme
   ```  
-  2、基于readme分支创建自己的分支
+  2、基于readme分支创建自己名字的分支
   ```powershell
   PS >git checkout -b 'wind/readme'
   ```
@@ -44,14 +53,7 @@ Blue Cloud Certified - PowerShell
   ![](images/readme.pullrequest.2.png)
   5）选择清楚，pull request的方向，点击“Create new pull request”按钮，完成Pull request  
   ![](images/readme.pullrequest.3.png)
-  6）填写说明，选择，需要帮你Review的人，然后点击“Create pull request”  
-  ![](images/readme.pullrequest.4.png)
-  7）此时，建坤在Pull request中找到Wind/readme的Pull request点开  
-  ![](images/readme.pullrequest.5.png)
-  8）点击Files changed，对内容进行校对  
-  ![](images/readme.pullrequest.6.png)
-
-直到最后讨论完成，由Frank进行Merge操作。
+  6、建坤重复上面的步骤，校对Wind pull request之后的branch，pull request，并由Wind改进自己的内容。
 
 # 文字稿
 
