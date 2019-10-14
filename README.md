@@ -53,7 +53,10 @@ Blue Cloud Certified - PowerShell
   ![](images/readme.pullrequest.2.png)
   5）选择清楚，pull request的方向，点击“Create new pull request”按钮，完成Pull request  
   ![](images/readme.pullrequest.3.png)
-  6、建坤重复上面的步骤，校对Wind pull request之后的branch，pull request，并由Wind改进自己的内容。
+  ![](images/readme.pullrequest.4.png)
+  6）Wind直接将wind/readme分支Merge到readme分支里
+  ![](images/readme.pullrequest.5.png)
+  6、建坤重复上面的步骤，校对Wind pull request之后的branch，pull request，然后由Wind改进自己的内容，确定是否Merge或者修改自己的内容。
 
 # 文字稿
 
