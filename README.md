@@ -65,10 +65,13 @@ PS C:\Users\vFrank\Documents\BCC-PS> git checkout -b you/part.test
 Switched to a new branch 'you/part.test'
 ```
 2.6 在Teambition中将任务从“待处理”移至“编写进行中”
+
 ![teambition](images/readme.teambition.1.png)
 
-3.1 编写内容
+3.1 编写内容  
+
 比如你在you/part.test中，新建一个test.md的文件，内容为test,并保存文件
+
 3.2 将文件提交给git来管理
 ```powershell
 git add .
@@ -79,10 +82,32 @@ git commit -m 'add test.md'
 git push
 ```
 这时，Frank的github上就会有了you/part.test这个分支
+
 ![pull request](images\readme.pullrequest.1.png)
 
 3.4 将你的分支you/part.test pull request 给part.test
 
+![pull request](images\readme.pullrequest.2.png)
+
+注意，选择好pull request的方向，在这里，你需要把you/part.test pull request 给part.test，因为这样，按我们定好的流程，别人就可以去基于你更新后的part.test去进行校对工作。
+
+![pull request](images\readme.pullrequest.3.png)
+
+![pull request](images\readme.pullrequest.4.png)
+
+3.5 Merge这个Pull request
+
+![pull request](images\readme.pullrequest.5.png)
+
+3.6 在Teambition中，将任务移至“校对进行中”
+
+![teambition](images/readme.teambition.2.png)
+
+至此，文章的Owner就完成了自己部分的内容的创建。  
+
+4.1 对于校对的人，跟上面的步骤是一样的，只是，不要做3.5这一步，由章节的Owner来决定是否要Merge。  
+4.2 当所有需要校对的人，完成校对之后，由章节的owner在Teambition中将任务移至“校对已完成”  
+4.3 最后由Project Owner确认内容，在Teambition中将任务移至“内容已完成”  
 
 # 文字稿
 
@@ -93,5 +118,3 @@ git push
   3、根据节的内容纲要确定内容的标准及要求，如：需要有知识讲解、截图、练习  
   4、分工开始具体写  
   5、完成文字稿工作
-
-
