@@ -83,21 +83,21 @@ git push
 ```
 这时，Frank的github上就会有了you/part.test这个分支
 
-![pull request](images\readme.pullrequest.1.png)
+![pull request](images/readme.pullrequest.1.png)
 
 3.4 将你的分支you/part.test pull request 给part.test
 
-![pull request](images\readme.pullrequest.2.png)
+![pull request](images/readme.pullrequest.2.png)
 
 注意，选择好pull request的方向，在这里，你需要把you/part.test pull request 给part.test，因为这样，按我们定好的流程，别人就可以去基于你更新后的part.test去进行校对工作。
 
-![pull request](images\readme.pullrequest.3.png)
+![pull request](images/readme.pullrequest.3.png)
 
-![pull request](images\readme.pullrequest.4.png)
+![pull request](images/readme.pullrequest.4.png)
 
 3.5 Merge这个Pull request
 
-![pull request](images\readme.pullrequest.5.png)
+![pull request](images/readme.pullrequest.5.png)
 
 3.6 在Teambition中，将任务移至“校对进行中”
 
