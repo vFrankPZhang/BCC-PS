@@ -2,11 +2,17 @@
 
 Blue Cloud Certified - PowerShell
 
-# 学习材料包括
+# 我们要准备的学习材料包括
 
   文字稿  
   PPT  
   视频
+
+# 需要的背景知识
+
+PowerShell  
+Markdown  
+Git  
 
 # 协作前的准备工作
   
@@ -19,7 +25,7 @@ Blue Cloud Certified - PowerShell
   git clone https://github.com/vFrankPZhang/BCC-PS.git BBC-PS
   ```
 
-# 协作步骤
+# 总体协作步骤
 
   1、依据确定好的章节，建立每章的Branch  
   2、每章的owner建立基于章节的Branch，建立以自己名字为前缀的Branch，在Teambition中，将任务状态移至“进行中”  
@@ -27,20 +33,42 @@ Blue Cloud Certified - PowerShell
   4、其他人为章节的Branch进行校对，完成后pull request回内容的Branch，直至校对完成后，章节Owner在Teambition中，将任务移至“内容已完成”  
 
 
-# 协作示例
+# 参与者协作示例
 
 假如，你现在是Part.Test章节的Owner
+  
 
-  1、打开PowerShell，进入仓库“BBC-PS”所在的路径：
-  ```powershell
-  PS > cd $home\document\BBC-PS
-  ```
-  2、执行git pull，将本地的仓库更新至与远端一致
-  ```powershell
-  PS > git pull
-  ```
-  3、
+2.1 打开PowerShell，进入仓库“BBC-PS”所在的路径：
+```powershell
+PS > cd $home\document\BBC-PS
+```
+2.2 执行git pull，将本地的仓库更新至与远端一致
+```powershell
+PS > git pull
+```
+2.3 查看仓库中有哪些branch
+```powershell
+PS C:\Users\vFrank\Documents\BCC-PS> git branch -a
+master
+remotes/origin/HEAD -> origin/master
+remotes/origin/master
+remotes/origin/part.test
+```
+2.4 切换到part.test分支
+```powershell
+PS C:\Users\vFrank\Documents\BCC-PS> git checkout part.test
+Switched to branch 'part.test'
+```
+2.5 创建以自己名字为前缀的part.test分支
+```powershell
+PS C:\Users\vFrank\Documents\BCC-PS> git checkout -b you/part.test
+Switched to a new branch 'you/part.test'
+```
+2.6 在Teambition中将任务从“待处理”移至“编写进行中”
+![Teambition](images/readme.teambition.1.png)
 
+3.1 编写内容
+比如你在you/part.test中，新建一个test.md的文件，内容为test
 
 
 
@@ -83,8 +111,4 @@ Blue Cloud Certified - PowerShell
   4、分工开始具体写  
   5、完成文字稿工作
 
-> ### 需要的背景知识
->
-> PowerShell  
-> Markdown  
-> Git  
+
