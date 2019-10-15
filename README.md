@@ -2,61 +2,112 @@
 
 Blue Cloud Certified - PowerShell
 
-# 学习材料包括
+# 我们要准备的学习材料包括
 
   文字稿  
   PPT  
   视频
 
+# 需要的背景知识
+
+PowerShell  
+Markdown  
+Git  
+
 # 协作前的准备工作
   
-  1、注册Github个人账号  
-  2、在本地安装Git和VS Code  
-  3、将BCC-PS仓库克隆至自己的本地  
+  1、注册Github个人账号，将帐号发给Project Owner  
+  2、注册Teambition帐号，将帐号发给Project Owner
+  3、在本地安装Git和VS Code  
+  4、将BCC-PS仓库克隆至自己的本地，命令如下：  
   ```powershell
-  cd $home\documents
+  cd $home\documents  #切换到希望本地仓库所存放的路径
   git clone https://github.com/vFrankPZhang/BCC-PS.git BBC-PS
   ```
 
-# 协作步骤
+# 总体协作步骤
 
-  1、依据分工，建立具体内容的Branch
-  2、owner建立自己名字的具体内容的Branch
-  3、owner完成内容创建后merge到具体内容的Branch上
-  4、其他人修正具体内容的Branch，pull request回内容的Branch
-  5、owner根据pull request修改，完成最终完
-  6、最后由Project owner确认
+  1、依据确定好的章节，建立每章的Branch  
+  2、每章的owner建立基于章节的Branch，建立以自己名字为前缀的Branch，在Teambition中，将任务状态移至“进行中”  
+  3、每章的owner完成内容编写后，pull request回章节的Branch上，并进行merage，在Teambition中，将任务移至“校对进行中”开始校对工作  
+  4、其他人为章节的Branch进行校对，完成后pull request回内容的Branch，直至校对完成后，章节Owner在Teambition中，将任务移至“内容已完成”  
 
-# 协作示例
 
-以Wind来完成readme内容的创作，其他人校对为例：
+# 参与者协作示例
 
-  1、Wind在自己的本地，将Git分支切换到readme分支  
-  ```powershell
-  PS >git checkout readme
-  ```  
-  2、基于readme分支创建自己名字的分支
-  ```powershell
-  PS >git checkout -b 'wind/readme'
-  ```
-  3、完成文档的创作  
-  4、将自己的分支push回Frank的Github
-  ```powershell
-  PS >git push origin wind/readme
-  ```
-  5、提交Pull Request到readme分支  
-  1）登录自己的Github帐号  
-  2）用浏览器进入：https://github.com/vFrankPZhang/BCC-PS  
-  3）点击“Pull requests”标签  
-  ![](images/readme.pullrequest.1.png)
-  4）点击“New pull request”按钮  
-  ![](images/readme.pullrequest.2.png)
-  5）选择清楚，pull request的方向，点击“Create new pull request”按钮，完成Pull request  
-  ![](images/readme.pullrequest.3.png)
-  ![](images/readme.pullrequest.4.png)
-  6）Wind直接将wind/readme分支Merge到readme分支里
-  ![](images/readme.pullrequest.5.png)
-  6、建坤重复上面的步骤，校对Wind pull request之后的branch，pull request，然后由Wind改进自己的内容，确定是否Merge或者修改自己的内容。
+假如，你现在是Part.Test章节的Owner
+  
+
+2.1 打开PowerShell，进入仓库“BBC-PS”所在的路径：
+```powershell
+PS > cd $home\document\BBC-PS
+```
+2.2 执行git pull，将本地的仓库更新至与远端一致
+```powershell
+PS > git pull
+```
+2.3 查看仓库中有哪些branch
+```powershell
+PS C:\Users\vFrank\Documents\BCC-PS> git branch -a
+master
+remotes/origin/HEAD -> origin/master
+remotes/origin/master
+remotes/origin/part.test
+```
+2.4 切换到part.test分支
+```powershell
+PS C:\Users\vFrank\Documents\BCC-PS> git checkout part.test
+Switched to branch 'part.test'
+```
+2.5 创建以自己名字为前缀的part.test分支
+```powershell
+PS C:\Users\vFrank\Documents\BCC-PS> git checkout -b you/part.test
+Switched to a new branch 'you/part.test'
+```
+2.6 在Teambition中将任务从“待处理”移至“编写进行中”
+
+![teambition](images/readme.teambition.1.png)
+
+3.1 编写内容  
+
+比如你在you/part.test中，新建一个test.md的文件，内容为test,并保存文件
+
+3.2 将文件提交给git来管理
+```powershell
+git add .
+git commit -m 'add test.md'
+```
+3.3 将you/part.test分支推送到Frank's的github上
+```powershell
+git push
+```
+这时，Frank的github上就会有了you/part.test这个分支
+
+![pull request](images\readme.pullrequest.1.png)
+
+3.4 将你的分支you/part.test pull request 给part.test
+
+![pull request](images\readme.pullrequest.2.png)
+
+注意，选择好pull request的方向，在这里，你需要把you/part.test pull request 给part.test，因为这样，按我们定好的流程，别人就可以去基于你更新后的part.test去进行校对工作。
+
+![pull request](images\readme.pullrequest.3.png)
+
+![pull request](images\readme.pullrequest.4.png)
+
+3.5 Merge这个Pull request
+
+![pull request](images\readme.pullrequest.5.png)
+
+3.6 在Teambition中，将任务移至“校对进行中”
+
+![teambition](images/readme.teambition.2.png)
+
+至此，文章的Owner就完成了自己部分的内容的创建。  
+
+4.1 对于校对的人，跟上面的步骤是一样的，只是，不要做3.5这一步，由章节的Owner来决定是否要Merge。  
+4.2 当所有需要校对的人，完成校对之后，由章节的owner在Teambition中将任务移至“校对已完成”  
+4.3 最后由Project Owner确认内容，在Teambition中将任务移至“内容已完成”  
 
 # 文字稿
 
@@ -67,9 +118,3 @@ Blue Cloud Certified - PowerShell
   3、根据节的内容纲要确定内容的标准及要求，如：需要有知识讲解、截图、练习  
   4、分工开始具体写  
   5、完成文字稿工作
-
-> ### 需要的背景知识
->
-> PowerShell  
-> Markdown  
-> Git  
