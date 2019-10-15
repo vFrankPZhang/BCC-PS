@@ -10,24 +10,39 @@ Blue Cloud Certified - PowerShell
 
 # 协作前的准备工作
   
-  1、注册Github个人账号  
-  2、在本地安装Git和VS Code  
-  3、将BCC-PS仓库克隆至自己的本地  
+  1、注册Github个人账号，将帐号发给Project Owner  
+  2、注册Teambition帐号，将帐号发给Project Owner
+  3、在本地安装Git和VS Code  
+  4、将BCC-PS仓库克隆至自己的本地，命令如下：  
   ```powershell
-  cd $home\documents
+  cd $home\documents  #切换到希望本地仓库所存放的路径
   git clone https://github.com/vFrankPZhang/BCC-PS.git BBC-PS
   ```
 
 # 协作步骤
 
-  1、依据分工，建立具体内容的Branch
-  2、owner建立自己名字的具体内容的Branch
-  3、owner完成内容创建后merge到具体内容的Branch上
-  4、其他人修正具体内容的Branch，pull request回内容的Branch
-  5、owner根据pull request修改，完成最终完
-  6、最后由Project owner确认
+  1、依据确定好的章节，建立每章的Branch  
+  2、每章的owner建立基于章节的Branch，建立以自己名字为前缀的Branch，在Teambition中，将任务状态移至“进行中”  
+  3、每章的owner完成内容编写后，pull request回章节的Branch上，并进行merage，在Teambition中，将任务移至“校对进行中”开始校对工作  
+  4、其他人为章节的Branch进行校对，完成后pull request回内容的Branch，直至校对完成后，章节Owner在Teambition中，将任务移至“内容已完成”  
+
 
 # 协作示例
+
+假如，你现在是Part.Test章节的Owner
+
+  1、打开PowerShell，进入仓库“BBC-PS”所在的路径：
+  ```powershell
+  PS > cd $home\document\BBC-PS
+  ```
+  2、执行git pull，将本地的仓库更新至与远端一致
+  ```powershell
+  PS > git pull
+  ```
+  3、
+
+
+
 
 以Wind来完成readme内容的创作，其他人校对为例：
 
