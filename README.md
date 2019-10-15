@@ -79,7 +79,7 @@ git commit -m 'add test.md'
 git push
 ```
 这时，Frank的github上就会有了you/part.test这个分支
-![pull request](images/readme.pullrequest.1.png)
+![pull request](images\readme.pullrequest.1.png)
 
 3.4 将你的分支you/part.test pull request 给part.test
 
