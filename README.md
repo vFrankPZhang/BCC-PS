@@ -65,41 +65,24 @@ PS C:\Users\vFrank\Documents\BCC-PS> git checkout -b you/part.test
 Switched to a new branch 'you/part.test'
 ```
 2.6 在Teambition中将任务从“待处理”移至“编写进行中”
-![Teambition](images/readme.teambition.1.png)
+![teambition](images/readme.teambition.1.png)
 
 3.1 编写内容
-比如你在you/part.test中，新建一个test.md的文件，内容为test
+比如你在you/part.test中，新建一个test.md的文件，内容为test,并保存文件
+3.2 将文件提交给git来管理
+```powershell
+git add .
+git commit -m 'add test.md'
+```
+3.3 将you/part.test分支推送到Frank's的github上
+```powershell
+git push
+```
+这时，Frank的github上就会有了you/part.test这个分支
+![pull request](images/readme.pullrequest.1.png)
 
+3.4 将你的分支you/part.test pull request 给part.test
 
-
-以Wind来完成readme内容的创作，其他人校对为例：
-
-  1、Wind在自己的本地，将Git分支切换到readme分支  
-  ```powershell
-  PS >git checkout readme
-  ```  
-  2、基于readme分支创建自己名字的分支
-  ```powershell
-  PS >git checkout -b 'wind/readme'
-  ```
-  3、完成文档的创作  
-  4、将自己的分支push回Frank的Github
-  ```powershell
-  PS >git push origin wind/readme
-  ```
-  5、提交Pull Request到readme分支  
-  1）登录自己的Github帐号  
-  2）用浏览器进入：https://github.com/vFrankPZhang/BCC-PS  
-  3）点击“Pull requests”标签  
-  ![](images/readme.pullrequest.1.png)
-  4）点击“New pull request”按钮  
-  ![](images/readme.pullrequest.2.png)
-  5）选择清楚，pull request的方向，点击“Create new pull request”按钮，完成Pull request  
-  ![](images/readme.pullrequest.3.png)
-  ![](images/readme.pullrequest.4.png)
-  6）Wind直接将wind/readme分支Merge到readme分支里
-  ![](images/readme.pullrequest.5.png)
-  6、建坤重复上面的步骤，校对Wind pull request之后的branch，pull request，然后由Wind改进自己的内容，确定是否Merge或者修改自己的内容。
 
 # 文字稿
 
