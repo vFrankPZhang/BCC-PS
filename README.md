@@ -79,7 +79,7 @@
 
 ![pull request 1](images/readme.pullrequest.1.png)
 
-    10. 将你的分支you/part.test pull request 给part.test
+    10. 将你的分支“you/part.test”pull request给“part.test”，并指定校对者和项目
 
 ![pull request 2](images/readme.pullrequest.2.png)
 
@@ -87,9 +87,26 @@
 
 ![pull request 3](images/readme.pullrequest.3.png)
 
+    点击小齿轮，指定校对者和所属项目，并点击“Create pull request”：
+
 ![pull request 4](images/readme.pullrequest.4.png)
 
-    11. 
+---
+    至此，章节的Owner完成了内容的pull request
+---
+
+    11. 校对者开始对“pull reuqest”进行校对
+
+    点击某一行前面的蓝色加号，可以在该行下面，为该行添加批注。
+
+![pull request 5](images/readme.pullrequest.5.png)
+
+    如：
+
+![pull request 6](images/readme.pullrequest.6.png)
+
+    然后，点击“start a review”开始review。
+
 
 # 文字稿
 
