@@ -27,28 +27,35 @@ Git
 
 # 总体协作步骤
 
-  1、依据确定好的章节，建立每章的Branch  
-  2、每章的owner建立基于章节的Branch，建立以自己名字为前缀的Branch，在Teambition中，将任务状态移至“进行中”  
-  3、每章的owner完成内容编写后，pull request回章节的Branch上，并进行merage，在Teambition中，将任务移至“校对进行中”开始校对工作  
-  4、其他人为章节的Branch进行校对，完成后pull request回内容的Branch，直至校对完成后，章节Owner在Teambition中，将任务移至“内容已完成”  
+  1、（Owner）依据确定好的章节，建立每章的章节Branch。例如：“PartA”。  
+  2、（章节owner）建立以自己名字为前缀的个人章节Branch，并进行编辑。例如：“Wind/PartA”。并在Teambition中，将任务状态移至“进行中”。  
+  3、（章节owner）完成内容编写后，进行“pull request”操作，并 **<mark style="color: Green">直接进行merage操作</mark>**。在Teambition中，将任务移至“校对进行中”开始校对工作。  
+  4、（参与者）其他人为章节进行校对编辑。同样创建个人Branch，例如：“JK/PartA”。完成校对编辑后，将个人Branch向章节Branch进行“pull request”请求。**<mark style="color: Red">但不进行merge</mark>**。  
+  5、（章节Owner）在校对“pull request”中进行检查。并与参与者沟通修改内容。完成后进行merge操作。章节Owner在Teambition中，将任务移至“内容已完成”。  
 
 
 # 参与者协作示例
 
 假如，你现在是Part.Test章节的Owner
-  
+
+2.0 将BCC-PS仓库克隆至自己的本地，命令如下：  
+  ```powershell
+  PS> git clone https://github.com/vFrankPZhang/BCC-PS.git BBC-PS  
+  ```
 
 2.1 打开PowerShell，进入仓库“BBC-PS”所在的路径：
 ```powershell
-PS > cd $home\document\BBC-PS
+PS> cd $home\document\BBC-PS
 ```
+
 2.2 执行git pull，将本地的仓库更新至与远端一致
 ```powershell
-PS > git pull
+PS> git pull
 ```
 2.3 查看仓库中有哪些branch
 ```powershell
-PS C:\Users\vFrank\Documents\BCC-PS> git branch -a
+PS> C:\Users\vFrank\Documents\BCC-PS> git branch -a
+
 master
 remotes/origin/HEAD -> origin/master
 remotes/origin/master
@@ -56,12 +63,12 @@ remotes/origin/part.test
 ```
 2.4 切换到part.test分支
 ```powershell
-PS C:\Users\vFrank\Documents\BCC-PS> git checkout part.test
+PS> C:\Users\vFrank\Documents\BCC-PS> git checkout part.test
 Switched to branch 'part.test'
 ```
 2.5 创建以自己名字为前缀的part.test分支
 ```powershell
-PS C:\Users\vFrank\Documents\BCC-PS> git checkout -b you/part.test
+PS> C:\Users\vFrank\Documents\BCC-PS> git checkout -b you/part.test
 Switched to a new branch 'you/part.test'
 ```
 2.6 在Teambition中将任务从“待处理”移至“编写进行中”
@@ -95,7 +102,7 @@ git push
 
 ![pull request](images/readme.pullrequest.4.png)
 
-3.5 Merge这个Pull request
+3.5 Merge这个Pull request <mark>(只有章节owner才可以进行merge操作)</mark>
 
 ![pull request](images/readme.pullrequest.5.png)
 
