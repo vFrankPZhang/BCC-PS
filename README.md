@@ -1,4 +1,4 @@
-# 蓝云研究院技术认证——PowerShell（BCC-PS）
+# 蓝云研究院技术认证——PowerShell
 
     Blue Cloud Certified - PowerShell
 
@@ -107,9 +107,19 @@
 
     然后，点击“start a review”开始review。
 
----
-    经过多次的沟通、校对，章节Owner最终完成文档的编写，再由校对人点击
+    12. 校对全部完成后，校对者，点击“submit review”完成review工作。
 
+![pull request 7](images/readme.pullrequest.7.png)
+
+    13. 章节Owner根据批注，修改内容后，重复步骤7-9，“pull request”上面的内容就会更新
+
+    14. 章节Owner与校对者，经过多次的沟通、校对，最终完成文档的编写，再由校对人对“review changes”进行approve。
+
+![pull request 8](images/readme.pullrequest.8.png)
+
+    15. 最后由项目Owner，进行merage操作
+
+![pull request 9](images/readme.pullrequest.9.png)
 
 # 文字稿
 
