@@ -1,4 +1,4 @@
-# 蓝云研究院技术认证——PowerShell
+# 蓝云研究院技术认证——PowerShell（BCC-PS）
 
     Blue Cloud Certified - PowerShell
 
@@ -106,6 +106,9 @@
 ![pull request 6](images/readme.pullrequest.6.png)
 
     然后，点击“start a review”开始review。
+
+---
+    经过多次的沟通、校对，章节Owner最终完成文档的编写，再由校对人点击
 
 
 # 文字稿
