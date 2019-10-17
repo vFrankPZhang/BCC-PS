@@ -2,4 +2,4 @@
 Blue Cloud Certified - PowerShell
 
 
-Training
+Github Training
