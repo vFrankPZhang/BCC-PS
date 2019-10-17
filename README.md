@@ -2,24 +2,37 @@
 
 Blue Cloud Certified - PowerShell
 
-# 我们要准备的学习材料包括
+## 我们要准备的学习材料包括
 
 文字稿  
 PPT  
 视频
 
-# 需要的背景知识
+## 需要的背景知识
 
 PowerShell  
 Markdown  
 Git  
 
-# 协作前的准备工作
+## 协作前的准备工作
   
-1. 注册Github个人账号，将帐号发给Project Owner  
-2. 在本地安装Git和VS Code  
+1.注册Github个人账号
+2.将项目的仓库Fork到自己的Github中  
 
-# 总体协作步骤
+仓库地址：https://github.com/vFrankPZhang/BCC-PS.giBBC-PS  
+
+通过浏览器进入到仓库，点击Fork，将该项目Fork到自己的Github中
+
+![Preparatory 1](images/readme.preparatory.1.png)
+
+3.在本地安装Git和VS Code  
+4.将自己Github中Fork的本项目仓库克隆到本地  
+
+```bash
+git clone https://github.com/vFrankwithqq/BCC-PS.git BBC-PS
+```
+
+## 总体协作步骤
 
 一共有三个角色：  
 项目Owner：对章节进行分工、merge章节Branch的人  
@@ -32,7 +45,7 @@ Git
 4. 校对者进行校对，并在章节Owner的“pull request”上进行批注、沟通。
 5. 章节Owner重新完善章节内容，完成后由项目Owner进行merge操作。
 
-# 参与者协作详细示例
+## 参与者协作详细示例
 
 假如，你现在是Part.Test章节的Owner
 
@@ -143,9 +156,9 @@ PS> git push --set-upstream origin you/part.test
 
 ![pull request 9](images/readme.pullrequest.9.png)
 
-# 文字稿
+## 文字稿
 
-## 完成文字稿的具体步骤
+### 完成文字稿的具体步骤
 
 1、章的划分、排序，每章目标的说明，及不同章的顺序的逻辑  
 2、根据确定的章，确定节的内容纲要  
