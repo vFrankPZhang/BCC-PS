@@ -19,9 +19,9 @@ Git
 1.注册Github个人账号
 2.将项目的仓库Fork到自己的Github中  
 
-仓库地址：https://github.com/vFrankPZhang/BCC-PS.giBBC-PS  
+项目仓库地址：https://github.com/vFrankPZhang/BCC-PS.git
 
-通过浏览器进入到仓库，点击Fork，将该项目Fork到自己的Github中
+通过浏览器进入到项目仓库，点击Fork，将该项目Fork到自己的Github中
 
 ![Preparatory 1](images/readme.preparatory.1.png)
 
@@ -29,21 +29,24 @@ Git
 4.将自己Github中Fork的本项目仓库克隆到本地  
 
 ```bash
-git clone https://github.com/vFrankwithqq/BCC-PS.git BBC-PS
+git clone https://github.com/vFrankwithqq/BCC-PS.git BCC-PS
 ```
 
 ## 总体协作步骤
 
-一共有三个角色：  
-项目Owner：对章节进行分工、Merge章节Branch的人  
-章节Owner：编写章节内容的人  
-校对者：校对章节内容的人  
+### 角色划分及职责
 
-1. 项目Owner依据确定好的章节，建立每章的章节“Branch”。例如：“part.a”。  
-2. 章节Owner将项目Fork到自己的Github上，并在章节“Branch“”上编辑内容。
-3. 章节Owner完成内容编写后，将自己编辑的“Branch”“Pull request”到项目仓库对应的“Branch”上。
-4. 校对者对“Pull request”进行校对，并在章节Owner的“Pull request”上进行批注、沟通。
-5. 章节Owner重新完善章节内容，“Pull request”得到校对者“Approve”后，由项目Owner进行merge操作。
+项目Owner：对章节进行划分、Merge Pull request的人  
+参与者：编写章节内容，提交Pull request的人  
+校对者：校对章节内容，批准Pull request的人  
+
+### 协作步骤
+
+1. 项目Owner依据确定好的章节，建立章节"Branch"。例如：Branch："part.a"。  
+2. 参与者将项目仓库Fork到自己的Github上，并建立以自己名字为前缀的章节"Branch"编写内容。例如：Branch："you/part.a"
+3. 参与者完成内容编写后，将自己的章节"Branch""Pull request"到项目仓库上对应的章节"Branch"上。例如："you/part.a" --->"part.a"
+4. 校对者对参与者提交的"Pull request"进行校对，并在参与者提交的"Pull request"上对内容进行批注和与参与者沟通。
+5. 参与者重新完善章节内容后，校对者"Approve"参与者提交的"Pull request"，由项目Owner对"Pull request"进行merge操作。
 
 ## 参与者协作详细示例
 
@@ -55,7 +58,7 @@ PS> cd $home\documents  #切换到希望本地仓库所存放的路径
 PS> git clone https://github.com/vFrankPZhang/BCC-PS.giBBC-PS
 ```
 
-2. 打开PowerShell，进入仓库“BBC-PS”所在的路径：
+2. 打开PowerShell，进入仓库"BBC-PS"所在的路径：
 ```powershell
 PS> cd $home\document\BBC-PS
 ```
@@ -115,15 +118,15 @@ PS> git push --set-upstream origin you/part.test
 
 ![pull request 1](images/readme.pullrequest.1.png)
 
-10. 将你的分支“you/part.test”pull request给“part.test”，并指定校对者和项目
+10. 将你的分支"you/part.test"pull request给"part.test"，并指定校对者和项目
 
 ![pull request 2](images/readme.pullrequest.2.png)
 
-注意，选择好pull request的方向，在这里，你需要把“you/part.test”pull request给“part.test”
+注意，选择好pull request的方向，在这里，你需要把"you/part.test"pull request给"part.test"
 
 ![pull request 3](images/readme.pullrequest.3.png)
 
-点击小齿轮，指定校对者和所属项目，并点击“Create pull request”：
+点击小齿轮，指定校对者和所属项目，并点击"Create pull request"：
 
 ![pull request 4](images/readme.pullrequest.4.png)
 
@@ -132,7 +135,7 @@ PS> git push --set-upstream origin you/part.test
 
 ---
 
-11. 校对者开始对“pull reuqest”进行校对
+11. 校对者开始对"pull reuqest"进行校对
 
 点击某一行前面的蓝色加号，可以在该行下面，为该行添加批注。
 
@@ -140,19 +143,19 @@ PS> git push --set-upstream origin you/part.test
 
 ![pull request 6](images/readme.pullrequest.6.png)
 
-然后，点击“start a review”开始review。
+然后，点击"start a review"开始review。
 
-12. 校对全部完成后，校对者，选择“request change”点击“submit review”，要求章节Owner修改。
+12. 校对全部完成后，校对者，选择"request change"点击"submit review"，要求章节Owner修改。
 
 ![pull request 7](images/readme.pullrequest.7.png)
 
-13. 章节Owner根据批注，修改内容后，重复步骤7-9，“pull request”里面的内容就会更新
+13. 章节Owner根据批注，修改内容后，重复步骤7-9，"pull request"里面的内容就会更新
 
-14. 章节Owner与校对者，经过多次的沟通、校对，最终完成文档的编写，再由校对人对“review changes”选择“approve”点击“submit review”，完成review。
+14. 章节Owner与校对者，经过多次的沟通、校对，最终完成文档的编写，再由校对人对"review changes"选择"approve"点击"submit review"，完成review。
 
 ![pull request 8](images/readme.pullrequest.8.png)
 
-15. “approve”“pull request”后，以为着章节内容已经完成，最后由项目Owner，进行merage操作
+15. "approve""pull request"后，以为着章节内容已经完成，最后由项目Owner，进行merage操作
 
 ![pull request 9](images/readme.pullrequest.9.png)
 
