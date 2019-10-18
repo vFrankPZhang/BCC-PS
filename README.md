@@ -35,15 +35,15 @@ git clone https://github.com/vFrankwithqq/BCC-PS.git BBC-PS
 ## 总体协作步骤
 
 一共有三个角色：  
-项目Owner：对章节进行分工、merge章节Branch的人  
+项目Owner：对章节进行分工、Merge章节Branch的人  
 章节Owner：编写章节内容的人  
 校对者：校对章节内容的人  
 
-1. 项目Owner依据确定好的章节，建立每章的章节Branch。例如：“part.a”。  
-2. 章节Owner建立以自己名字为前缀的个人章节Branch，并进行编辑。例如：“wind/part.a”。`注意，所有branch的名字使用小写字母`  
-3. 章节Owner完成内容编写后，进行“pull request”操作，并在“pull request”中指定校对者。
-4. 校对者进行校对，并在章节Owner的“pull request”上进行批注、沟通。
-5. 章节Owner重新完善章节内容，完成后由项目Owner进行merge操作。
+1. 项目Owner依据确定好的章节，建立每章的章节“Branch”。例如：“part.a”。  
+2. 章节Owner将项目Fork到自己的Github上，并在章节“Branch“”上编辑内容。
+3. 章节Owner完成内容编写后，将自己编辑的“Branch”“Pull request”到项目仓库对应的“Branch”上。
+4. 校对者对“Pull request”进行校对，并在章节Owner的“Pull request”上进行批注、沟通。
+5. 章节Owner重新完善章节内容，“Pull request”得到校对者“Approve”后，由项目Owner进行merge操作。
 
 ## 参与者协作详细示例
 
