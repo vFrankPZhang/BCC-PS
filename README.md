@@ -2,17 +2,36 @@
 
 Blue Cloud Certified - PowerShell
 
-## 我们要准备的学习材料包括
+## 我们要准备的认证培训材料包括
 
 文字稿  
 PPT  
 视频
 
+我们通过Git/Github进行认证培训材料的协作编辑。
+
 ## 需要的背景知识
 
 PowerShell  
 Markdown  
-Git  
+Git
+VS Code
+
+## 总体协作步骤
+
+### 角色划分及职责
+
+项目Owner：对章节进行划分、Merge章节"Branch";  
+参与者：编写章节内容，提交章节"Branch""Pull request"；  
+校对者：校对章节内容，批准章节"Pull request"，Merge章节"Pull request"。  
+
+### 协作步骤
+
+1.项目Owner依据确定好的章节，建立章节"Branch"。例如：Branch："part.a"。  
+2.参与者将项目仓库Fork到自己的Github上，并建立以自己名字为前缀的章节"Branch"编写内容。例如：Branch："you/part.a"
+3.参与者完成内容编写后，将自己的章节"Branch""Pull request"到项目仓库上对应的章节"Branch"上。例如："you/part.a" --->"part.a"
+4.校对者对参与者提交的"Pull request"进行校对，并在参与者提交的"Pull request"上对内容进行批注和与参与者沟通。
+5.参与者重新完善章节内容后，校对者"Approve"参与者提交的"Pull request"，由项目Owner对"Pull request"进行merge操作。
 
 ## 协作前的准备工作
   
@@ -29,137 +48,141 @@ Git
 4.将自己Github中Fork的本项目仓库克隆到本地  
 
 ```bash
-git clone https://github.com/vFrankwithqq/BCC-PS.git BCC-PS
+git clone https://github.com/<your github>/BCC-PS.git BCC-PS
 ```
 
-## 总体协作步骤
+## 协作详细示例
 
-### 角色划分及职责
+> 项目Owner：Frank  
+> 参与者：Jk  
+> 校对者：Wind  
+> 章节Branch：part.a  
 
-项目Owner：对章节进行划分、Merge Pull request的人  
-参与者：编写章节内容，提交Pull request的人  
-校对者：校对章节内容，批准Pull request的人  
+* 准备阶段
+* 编辑阶段
+* 校对阶段
+* 改进阶段
 
-### 协作步骤
+### 准备阶段
 
-1. 项目Owner依据确定好的章节，建立章节"Branch"。例如：Branch："part.a"。  
-2. 参与者将项目仓库Fork到自己的Github上，并建立以自己名字为前缀的章节"Branch"编写内容。例如：Branch："you/part.a"
-3. 参与者完成内容编写后，将自己的章节"Branch""Pull request"到项目仓库上对应的章节"Branch"上。例如："you/part.a" --->"part.a"
-4. 校对者对参与者提交的"Pull request"进行校对，并在参与者提交的"Pull request"上对内容进行批注和与参与者沟通。
-5. 参与者重新完善章节内容后，校对者"Approve"参与者提交的"Pull request"，由项目Owner对"Pull request"进行merge操作。
+1.Jk将Frank Github上的仓库"BCC-PS""Fork"至自己的Github帐户中;  
+2.Jk将自己Github上"Fork"的仓库"BCC-PS"克隆至自己的计算机本地;
 
-## 参与者协作详细示例
-
-假如，你现在是Part.Test章节的Owner
-
-1. 将BCC-PS仓库克隆至自己的本地，命令如下：  
 ```powershell
-PS> cd $home\documents  #切换到希望本地仓库所存放的路径
-PS> git clone https://github.com/vFrankPZhang/BCC-PS.giBBC-PS
+PS C:\Windows\system32> cd $home\documents  #切换到希望本地仓库所存放的路径
+PS C:\Users\Jk\Documents> git clone https://github.com/<your github>/BCC-PS.git BCC-PS
 ```
 
-2. 打开PowerShell，进入仓库"BBC-PS"所在的路径：
+3.Jk在Git中切换到自己需要编辑的"Branch";
+
 ```powershell
-PS> cd $home\document\BBC-PS
+PS C:\Users\Jk\Documents\BCC-PS> git checkout part.a
 ```
 
-3. 执行git pull，将本地的仓库更新至与远端一致
+4.Jk建立以自己名字作为前缀的“part.a”分支；
+
 ```powershell
-PS> git pull
+PS C:\Users\Jk\Documents\BCC-PS> git checkout -b jk/part.a
 ```
 
-4. 查看仓库中有哪些branch
+### 编辑阶段
+
+1.Jk在VS Code中打开计算机本地从自己Github上克隆下来的BCC-PS文件夹。
+
+2.Jk编写文件，例如：通过VS Code在BCC-PS目录中新建一个Markdown文件，名为"part.a.md"，内容如下并保存。
+
+![Preparatory 1](images/readme.edit.1.png)
+
+3.Jk将"part.a.md"文件提交给git，以便推送到自己的github仓库中
+
 ```powershell
-PS> git branch -a
-master
-remotes/origin/HEAD -> origin/master
-remotes/origin/master
-remotes/origin/part.test
+PS C:\Users\Jk\Documents\bcc-ps> git add part.a.md
+PS C:\Users\Jk\Documents\bcc-ps> git commit -m 'add part.a.md'
+[jk/part.a 9d3ce72] add part.a.md
+ 1 file changed, 3 insertions(+)
+ create mode 100644 part.a.md
 ```
 
-5. 切换到part.test分支
+4.Jk将本地BCC-PS仓库中的内容推送至Github中
+
 ```powershell
-PS> git checkoupart.test
-Switched to branch 'part.test'
+PS C:\Users\Jk\Documents\BCC-PS> git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 284 bytes | 142.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Jk/BCC-PS.git
+remote:
+remote: Create a pull request for 'jk/part.a' on GitHub by visiting:
+remote:      https://github.com/Jk/BCC-PS/pull/new/jk/part.a
+remote:
+To https://github.com/jk/bcc-ps.git
+ * [new branch]      jk/part.a -> jk/part.a
 ```
 
-6. 创建以自己名字为前缀的part.test分支
-```powershell
-PS> git checkout -you/part.test
-Switched to a new branch 'you/part.test'
-```
+### 校对阶段
 
-7. 编写内容  
-比如你在you/part.test中，新建一个test.md的文件，内test,并保存文件
+1.Jk将"jk/part.a"分支从自己的github上"Pull request"给Frank的github的"part.a"分支上
 
-8. 将文件提交给git来管理
-```powershell
-PS> git add .
-PS> git commit -m 'add test.md'
-```
+![Pull request 1](images/readme.pullrequest.1.png)
 
-9. 将you/part.test分支推送到Frank's的github上
-```powershell
-PS> git push
-```
-如果遇到报错如下：
-```powershell
-fatal: The current branch you/part.test has no upstream branch.
-To push the current branch and set the remote as upstream, use
+请注意选择好"Pull request"的方向，是从Jk:jk/part.a ---> Frank：part.a，然后点击绿色的"Create pull request"按钮  
+如果没有出现截图中的选择框，请点击"compare across forks"
 
-    git push --set-upstream origin you/part.test
-```
-请执行：
-```powershell
-PS> git push --set-upstream origin you/part.test
-```
+![Pull request 2](images/readme.pullrequest.2.png)
 
-这时，Frank的github上就会有了you/part.test这个分支
+2.此时，Frank的Github上的BCC-PS仓库中的"Pull request"标签页，就会出现一个由Jk提交过来的"Pull request"
 
-![pull request 1](images/readme.pullrequest.1.png)
+![Pull request 3](images/readme.pullrequest.3.png)
 
-10. 将你的分支"you/part.test"pull request给"part.test"，并指定校对者和项目
+3.校对者Wind，点击Jk提交的"Pull request"的标题进入"Pull request"的详情页
 
-![pull request 2](images/readme.pullrequest.2.png)
+4.Wind将该"Pull request"的Reviewers指定给Wind，将Projects指定给BCC-PS。这样，该"Pull request"就会被Github的Workflow自动追踪，其他人就可以在"Project"页面看到进度。
 
-注意，选择好pull request的方向，在这里，你需要把"you/part.test"pull request给"part.test"
+![Pull request 4](images/readme.pullrequest.4.png)
 
-![pull request 3](images/readme.pullrequest.3.png)
+![Project 1](images/readme.project.1.png)
 
-点击小齿轮，指定校对者和所属项目，并点击"Create pull request"：
+5.Wind点击"Pull request"标签页中的"Files Changed"查看Jk提交过来的内容，并进行批注。
 
-![pull request 4](images/readme.pullrequest.4.png)
+如："part.a.md"文件中的第3行，应该将内容"Test 1"改"Test 2"，点击小红框，可以自动生成```suggestion```，可以将建议修改后的内容填入，批注完成，点击"Start a review"开始校对。
 
----
-至此，章节的Owner完成了内容的pull request
+![Pull request 5](images/readme.pullrequest.5.png)
 
----
+6.Wind完成全部校对后，点击"Finish your review"，选择"Request change"，要求Jk修改内容。
 
-11. 校对者开始对"pull reuqest"进行校对
+![Pull request 6](images/readme.pullrequest.6.png)
 
-点击某一行前面的蓝色加号，可以在该行下面，为该行添加批注。
+7.Jk可以在"Pull reqeust"中看到Wind的批注，可以与Wind进行内容的探讨。
 
-![pull request 5](images/readme.pullrequest.5.png)
+![Pull request 7](images/readme.pullrequest.7.png)
 
-![pull request 6](images/readme.pullrequest.6.png)
+## 改进阶段
 
-然后，点击"start a review"开始review。
+1.Jk在VS Code中重新编辑内容
+![Pull request 8](images/readme.pullrequest.8.png)
 
-12. 校对全部完成后，校对者，选择"request change"点击"submit review"，要求章节Owner修改。
+2.Jk重复编辑阶段的第3、4步
 
-![pull request 7](images/readme.pullrequest.7.png)
+3.Jk修正后并重新Push到Jk Github的内容，会自动在"Pull request"中更新
 
-13. 章节Owner根据批注，修改内容后，重复步骤7-9，"pull request"里面的内容就会更新
+![Pull request 9](images/readme.pullrequest.9.png)
 
-14. 章节Owner与校对者，经过多次的沟通、校对，最终完成文档的编写，再由校对人对"review changes"选择"approve"点击"submit review"，完成review。
+## 完成校对
 
-![pull request 8](images/readme.pullrequest.8.png)
+1.Wind确认修改后的内容，同意进行Merge后，点击"Review changes"，选择"Approve"并点击"Submit review"，完成Review工作。
 
-15. "approve""pull request"后，以为着章节内容已经完成，最后由项目Owner，进行merage操作
+![Pull request 10](images/readme.pullrequest.10.png)
 
-![pull request 9](images/readme.pullrequest.9.png)
+2.Wind点击"Merge pull request"将"Approve"之后的"Pull request"合并到章节Branch"part.a"上。
 
-## 文字稿
+![Pull request 11](images/readme.pullrequest.11.png)
+
+## 关于文字稿
 
 ### 完成文字稿的具体步骤
 
