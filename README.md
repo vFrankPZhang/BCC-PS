@@ -62,6 +62,7 @@ git clone https://github.com/<your github>/BCC-PS.git BCC-PS
 * 编辑阶段
 * 校对阶段
 * 改进阶段
+* 完成校对
 
 ### 准备阶段
 
