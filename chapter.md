@@ -1,5 +1,7 @@
 # 章节及其目标和前后逻辑
 
+注意每章知识的讲解范围，确保读者对知识理解的连续性。
+
 ## 1.PowerShell概述
 
 ### 目标和章节逻辑
@@ -8,8 +10,14 @@
 
 ### 节
 
-* 1.1什么是PowerShell
-* 1.2PowerShell的重要特性
+* 1.1什么是PowerShell  
+是一种命令行管理工具，还是一种脚本语言
+* 1.2PowerShell的重要特性  
+基于.NET Framework  
+基于对象  
+命令可扩展
+PowerShell使用一些c#的语法
+拥抱开源
 
 ## 2.开始使用PowerShell
 
@@ -17,11 +25,18 @@
 
 介绍完PS是什么后，让读者准备好PowerShell的使用环境，知道从哪打开PowerShell控制台，然后跟随教程运行一条PowerShell命令，体验一下通过PowerShell完成工作
 
+### 节
 
+* 2.1安装PowerShell  
+Windows不需要安装，我们使用Windows 10系统，PowerShell 5.1版本  
+Linux安装PowerShell  
+MAC安装PowerShell
 
-* 2.1安装PowerShell
-* 2.2打开PowerShell控制台
-* 2.3执行一条Powershell命令
+* 2.2打开PowerShell控制台  
+打开PowerShell控制台  
+查看当前PowerShell版本
+* 2.3执行一条Powershell命令  
+Get-Process -Name notepad来体验一下如果通过powershell查看记事本应用的进程信息
 
 ## 3.认识PowerShell的命令
 
@@ -31,9 +46,15 @@
 
 ### 节
 
-* 3.1PowerShell命令的结构
-* 3.2获取需要的PowerShell命令
-* 3.3PowerShell命令的别名
+* 3.1PowerShell命令的结构  
+cmdlet使用动词-名词的命名规则  
+cmdlet使用标准的参数名，比如-Name，在很多命令中都存在，且意义相同.
+* 3.2获取需要的PowerShell命令  
+基于对动词-名词的结构的理解，通过Get-Command命令来找到需要的命令
+* 3.3PowerShell命令的别名  
+查看别名  
+标准别名  
+创建新的别名
 
 ## 4.使用PowerShell的帮助系统
 
@@ -56,9 +77,12 @@
 
 ### 节
 
-* 5.1
-*
-*
+* 5.1 连接一个命令与另一个命令
+
+以Get-Process -Name notepad | Stop-Process为例，引出如何通过管道，将两条命令连接起来，以实现一条命令解决问题。
+
+* 5.2 输出结果到CSV或XML文件
+关于输出会有具体的章节来讲解，这里主要是通过将结果输出来掌握管道对命令的连接的使用。
 
 ## 6.对象
 
@@ -68,10 +92,14 @@
 
 ### 节
 
-* 6.1什么是对象
-* 6.2探索对象
-* 6.3对象的属性
-* 6.4对象的方法
+* 6.1 什么是对象
+对象包含对象的类型、属性和方法，举例子来描述这些东西是什么
+* 6.2 探索对象
+讲解通过Get-Member来看，对象的这些东西是什么样的
+* 6.3 对象的属性
+具体看一下对象的属性
+* 6.4 对象的方法
+具体看一下对象的方法
 
 ## 7.对象的操作
 
@@ -81,6 +109,32 @@
 
 ### 节
 
-* 
-*
-*
+* 7.1 通过属性操作对象
+select/where/sort/group/measure/compare/foreach
+* 7.2 通过方法操作对象
+
+
+## 8.格式化和输出
+
+### 目标和章节逻辑
+
+学习格式化命令，来掌握对powershell输出结果的显示样式的控制，为之后命令结果的输出做准备
+
+### 节
+
+* 8.1 格式化输出
+ft/fl/fw
+
+## 9.变量和输入
+
+## 10.文件系统
+
+## 11.远程处理
+
+## 12.使用WMI
+
+## 13.作业Job
+
+## 14.扩展命令
+
+## 15.使用脚本
