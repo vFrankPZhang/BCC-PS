@@ -28,9 +28,9 @@ VS Code
 ### 协作步骤
 
 1.项目Owner依据确定好的章节，建立章节"Branch"。例如：Branch："part.a"。  
-2.参与者将项目仓库Fork到自己的Github上，并建立以自己名字为前缀的章节"Branch"编写内容。例如：Branch："you/part.a"
-3.参与者完成内容编写后，将自己的章节"Branch""Pull request"到项目仓库上对应的章节"Branch"上。例如："you/part.a" --->"part.a"
-4.校对者对参与者提交的"Pull request"进行校对，并在参与者提交的"Pull request"上对内容进行批注和与参与者沟通。
+2.参与者将项目仓库Fork到自己的Github上，并建立以自己名字为前缀的章节"Branch"编写内容。例如：Branch："you/part.a"  
+3.参与者完成内容编写后，将自己的章节"Branch""Pull request"到项目仓库上对应的章节"Branch"上。例如："you/part.a" --->"part.a"  
+4.校对者对参与者提交的"Pull request"进行校对，并在参与者提交的"Pull request"上对内容进行批注和与参与者沟通。  
 5.参与者重新完善章节内容后，校对者"Approve"参与者提交的"Pull request"，由项目Owner对"Pull request"进行merge操作。
 
 ## 协作前的准备工作
