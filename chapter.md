@@ -206,6 +206,10 @@ select/where/sort/group/measure/compare/foreach
 
 ### 节
 
+* 11.1 一对一的远程处理
+* 11.2 一对多的远程处理
+* 11.3 本地处理和远程处理对比
+
 ## 12.使用WMI
 
 ### 目标和章节逻辑
@@ -214,6 +218,10 @@ select/where/sort/group/measure/compare/foreach
 
 ### 节
 
+* 12.1 WMI概要
+* 12.2 在PowerShell中使用WMI
+    get-wmiobject和get-ciminstance
+* 12.3 如何找到需要使用的WMI
 
 ## 13.作业Job
 
@@ -223,6 +231,15 @@ select/where/sort/group/measure/compare/foreach
 
 ### 节
 
+* 13.1 利用PowerShell实现多任务同时处理
+* 13.2 任务处理的同步和异步
+* 13.3 创建本地Job
+* 13.4 创建WMI Job
+* 13.5 远程处理Job
+* 13.6 获取Job的处理结果
+* 13.7 使用子Job
+* 13.8 Job的管理
+* 13.9 Schedule Job
 
 ## 14.扩展命令
 
@@ -232,6 +249,10 @@ select/where/sort/group/measure/compare/foreach
 
 ### 节
 
+* 14.1 只有一个PowerShell
+无论什么产品的PowerShell其实都只是一个PowerShell，只是加载的不同的扩展命令集
+* 14.2 PSSnapin
+* 14.3 PSModule
 
 ## 15.使用脚本
 
